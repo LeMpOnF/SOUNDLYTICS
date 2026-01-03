@@ -1,0 +1,7 @@
+{
+  "name": "Soundlytics",
+  "description": "Professional-grade AI music genre and technical analysis. Decode audio DNA using Gemini 3 for deep musicological insights.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
