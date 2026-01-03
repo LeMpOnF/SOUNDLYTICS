@@ -6,45 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soundlytics - AI Audio Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-       @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-       body { 
-         font-family: 'Plus Jakarta Sans', sans-serif; 
-         scrollbar-width: thin;
-         scrollbar-color: #475569 #020617;
-       }
-       
-       ::-webkit-scrollbar {
-         width: 6px;
-       }
-       ::-webkit-scrollbar-track {
-         background: #020617;
-       }
-       ::-webkit-scrollbar-thumb {
-         background-color: #334155;
-         border-radius: 10px;
-       }
+    <script>
+      // Professional Tailwind configuration matching tailwind.config.js
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                950: '#020617',
+              },
+            },
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+            animation: {
+              'fadeIn': 'fadeIn 0.4s ease-out forwards',
+              'slideUp': 'slideUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(15px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body { 
+          @apply bg-slate-950 text-slate-100 overflow-x-hidden antialiased;
+          font-family: 'Plus Jakarta Sans', sans-serif; 
+          scrollbar-width: thin;
+          scrollbar-color: #475569 #020617;
+        }
+      }
 
-       /* Custom Animations */
-       @keyframes fadeIn {
-         from { opacity: 0; }
-         to { opacity: 1; }
-       }
-       @keyframes slideUp {
-         from { opacity: 0; transform: translateY(15px); }
-         to { opacity: 1; transform: translateY(0); }
-       }
-       
-       .animate-fadeIn { animation: fadeIn 0.4s ease-out forwards; }
-       .animate-slideUp { animation: slideUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+      @layer components {
+        .glass {
+          @apply bg-slate-900/60 border border-white/5 backdrop-blur-xl shadow-2xl;
+        }
+      }
 
-       .glass {
-         background: rgba(15, 23, 42, 0.6);
-         backdrop-filter: blur(12px);
-         -webkit-backdrop-filter: blur(12px);
-         border: 1px solid rgba(255, 255, 255, 0.05);
-       }
+      @layer utilities {
+        ::-webkit-scrollbar {
+          @apply w-[6px];
+        }
+        ::-webkit-scrollbar-track {
+          @apply bg-slate-950;
+        }
+        ::-webkit-scrollbar-thumb {
+          @apply bg-slate-700 rounded-full border-2 border-slate-950;
+        }
+      }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script type="importmap">
 {
   "imports": {
@@ -58,7 +79,7 @@
 }
 </script>
 </head>
-  <body class="bg-slate-950 text-slate-100 overflow-x-hidden">
+  <body>
     <div id="root"></div>
   </body>
 </html>
