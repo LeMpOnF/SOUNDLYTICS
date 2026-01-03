@@ -49,11 +49,16 @@ const analysisSchema: Schema = {
   ],
 };
 
-const getSystemPrompt = (lang: Language) => 
-  `You are the core intelligence of Soundlytics, a professional-grade music analysis platform. 
+const getSystemPrompt = (lang: Language) => {
+  let targetLang = 'English';
+  if (lang === 'th') targetLang = 'Thai';
+  if (lang === 'php') targetLang = 'Filipino (Tagalog)';
+  
+  return `You are the core intelligence of Soundlytics, a professional-grade music analysis platform. 
    Your analysis must be precise, objective, and deeply musicological. Use standard industry terminology.
-   IMPORTANT: You must provide all text fields (primaryGenre, moods, instrumentation, similarArtists, description, culturalContext, and subGenre names) in the following language: ${lang === 'th' ? 'Thai' : 'English'}.
+   IMPORTANT: You must provide all text fields (primaryGenre, moods, instrumentation, similarArtists, description, culturalContext, and subGenre names) in the following language: ${targetLang}.
    Technical fields like BPM and Key should remain in universal musical notation.`;
+};
 
 export const analyzeAudioContent = async (base64Audio: string, mimeType: string, lang: Language): Promise<AnalysisResult> => {
   try {

@@ -118,6 +118,12 @@ const App: React.FC = () => {
                 >
                   TH
                 </button>
+                <button 
+                  onClick={() => setLang('php')}
+                  className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${lang === 'php' ? 'bg-indigo-600 text-white shadow-lg' : 'text-slate-500 hover:text-white'}`}
+                >
+                  PHP
+                </button>
              </div>
 
              {process.env.API_KEY && (

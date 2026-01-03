@@ -1,5 +1,5 @@
 
-export type Language = 'en' | 'th';
+export type Language = 'en' | 'th' | 'php';
 
 export const translations = {
   en: {
@@ -63,9 +63,42 @@ export const translations = {
     sonic_atmosphere: "บรรยากาศเสียง",
     layer_profile: "โปรไฟล์เครื่องดนตรี",
     proximity_network: "ศิลปินที่ใกล้เคียง",
-    historical_origin: "ความเป็นมาทางวัฒนธรรม",
+    historical_origin: "ความเป็นมาทางวัฒธรรม",
     error_engine: "เครื่องยนต์วิเคราะห์ขัดข้อง กรุณาตรวจสอบคุณภาพสัญญาณและลองใหม่",
     error_input: "กรุณาใส่สัญญาณเสียงหรือข้อความค้นหาที่ถูกต้อง",
     footer_rights: "การวิเคราะห์เสียงที่แม่นยำ ขับเคลื่อนโดย Gemini 3 Flash"
+  },
+  php: {
+    title: "SOUNDLYTICS",
+    subtitle: "Kalinangan ng Audio",
+    nav_docs: "Dokumentasyon",
+    nav_api: "API",
+    hero_title_1: "I-DECODE ANG",
+    hero_title_2: "SONIC SPECTRUM",
+    hero_desc: "Enterprise-grade na pagsusuri ng musika gamit ang Gemini 3. Tukuyin ang mga genre, mood, at pattern nang may ganap na katumpakan.",
+    import_audio: "Mag-import ng Audio",
+    drag_browse: "I-drag o Mag-browse",
+    live_sensor: "Live na Sensor",
+    use_mic: "Gamitin ang Mic",
+    capturing: "Kinukuha...",
+    signal_locked: "Selyadong Sinyal",
+    descriptor_module: "Modyul ng Deskripsyon",
+    placeholder_text: "Ilagay ang teknikal na deskripsyon o vibe metadata...",
+    btn_processing: "Pinoproseso ang Sinyal",
+    btn_generate: "Gumawa ng Ulat",
+    confidence_rating: "Rating ng Kumpiyansa",
+    digital_id: "Identidad ng Digital na Sinyal",
+    genre_mapping: "Mapa ng Genre",
+    signal_metadata: "Metadata ng Sinyal",
+    tempo: "Tempo",
+    harmonic_key: "Harmonic Key",
+    structure: "Istraktura",
+    sonic_atmosphere: "Atmospera ng Tunog",
+    layer_profile: "Profile ng Layer",
+    proximity_network: "Network ng Pagkakatulad",
+    historical_origin: "Pinagmulang Kasaysayan",
+    error_engine: "Timeout ang engine sa pagsusuri. Suriin ang kalidad ng sinyal at subukan ulit.",
+    error_input: "Mangyaring maglagay ng valid na audio signal o text query.",
+    footer_rights: "Precision Audio Analytics. Pinapatakbo ng Gemini 3 Flash."
   }
 };
