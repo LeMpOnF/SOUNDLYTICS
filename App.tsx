@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Cpu, Activity, Pause, Play, Layers } from 'lucide-react';
+import { Cpu, Activity, Pause, Play, Layers, Globe } from 'lucide-react';
 import AudioInput from './components/AudioInput';
 import AnalysisView from './components/AnalysisView';
 import Visualizer from './components/Visualizer';

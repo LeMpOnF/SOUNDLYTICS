@@ -8,8 +8,7 @@ interface VisualizerProps {
 
 const Visualizer: React.FC<VisualizerProps> = ({ isPlaying }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  // Fix: useRef requires an initial value argument to satisfy its signature
-  const animationRef = useRef<number | null>(null);
+  const animationRef = useRef<number>();
 
   useEffect(() => {
     const canvas = canvasRef.current;
